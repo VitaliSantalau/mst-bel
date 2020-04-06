@@ -34,11 +34,36 @@
     </header>
    
     <main>
-      <section class="main_introduction">
-        <div class="main_introduction_image-container">
-          <img src="pictures/introduction.jpg" class="main_introduction_image">
+      <section class="main_slayder">
+        <div class="slayder_container_frames">
+          <div class="slayder_frame">
+            <img src="pictures/introduction.jpg" class="slayder_frame_image">
+            <div>First</div>
+          </div>
+          <div class="slayder_frame">
+            <img src="pictures/introduction.jpg" class="slayder_frame_image">
+            <div>Second</div>
+          </div>
+          <div class="slayder_frame">
+            <img src="pictures/introduction.jpg" class="slayder_frame_image">
+            <div>Third</div>
+          </div>
+          <a class="prevArrow" onclick="prevFrame()"><</a>
+          <a class="nextArrow" onclick="nextFrame()">></a>
+        </div>
+
+        <div class="container_mark_currentFrame">
+          <span class="mark_currentFrame" onclick="currentFrame(1)"></span>  
+          <span class="mark_currentFrame" onclick="currentFrame(2)"></span>  
+          <span class="mark_currentFrame" onclick="currentFrame(3)"></span>  
         </div>
       </section>
+
+
+
+
+
+
       <section class="main_items">
         <div class="item">
           фотка товара
