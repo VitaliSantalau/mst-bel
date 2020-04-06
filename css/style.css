@@ -7,26 +7,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1%;
+  padding: 1%;
 }
 
 header {
   height: 10%;
   width: 100%;
-
+  padding-bottom: 0.5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   border-bottom: 3px solid rgb(211, 204, 204);
-
 }
 
 .header_logo p {
   font-size: 2.16em;
   font-weight: 900;
   margin: 5px;
-  
   color: brown;
 }
 
@@ -37,6 +34,7 @@ header {
 }
 
 .header_contact {
+  flex-grow: 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -45,7 +43,6 @@ header {
 .header_contact .telephone {
   font-weight: 900;
   color: rgb(61, 59, 59);
-  margin: 5px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -76,7 +73,6 @@ header {
   margin-left: 15px;
   padding-top: 5%;
   padding-left: 5px;
-
   border-left: 3px solid rgb(211, 204, 204);
 }
 
@@ -89,43 +85,39 @@ header {
 main {
   width: 80%;
   flex-grow: 1;
-  margin: 1%;
-  
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-
 }
 
-.mane_introduction {
+.main_introduction {
   width: 60%;
-  height: auto;
+  height: 80%;
 }
 
-.mane_introduction_image-container {
+.main_introduction_image-container {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
-.mane_introduction_image {
+.main_introduction_image {
   width: 100%;
   height: auto;
 }
 
-.mane_items {
-  
+.main_items {
+  width: 35%;
+  height: 80%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
-  
+  align-content: stretch;
 }
 
-.mane_items .item {
-  margin-bottom: 2%;
-  width: 45%;
-  height: 130px;
+.main_items .item {
+  width: 40%;
+  height: 38%;
   border: 1px solid rgb(211, 204, 204);
 }
 
