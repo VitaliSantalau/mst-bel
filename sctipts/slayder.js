@@ -1,39 +1,56 @@
-// index of frame
-let index = 1;
+let slide = document.querySelector('.main_slide');
+let wrapper = document.querySelector('.slide_wrapper');
+let slideItems = document.querySelectorAll('.slide_item');
+let leftArrow = document.querySelector('.slide_leftArrow');
+let rightArrow = document.querySelector('.slide_rightArrow');
 
-function showFrame(n) {
-  let frames = document.getElementsByClassName("slayder_frame");
-  let marks = document.getElementsByClassName("mark_Frame");
-  
-  if (n > frames.length) {
-    index = 1;
+let wrapperWidth = parseFloat(getComputedStyle(wrapper).width); // width .slide_wrapper
+let itemWidth = parseFloat(getComputedStyle(items[0]).width); // width .slide_item
+let itemPosition = 0;
+let wrapperTransform = 0; // value for transform .slide_wrapper
+let step = itemWidth / wrapperWidth * 100; // step for transform
+let items = [];
+
+let position = {
+  getMin: 0,
+  getMax: items.length - 1
+};
+
+slideItems.forEach(
+  function(item, index) {
+    items.push({ item: item, position: index, transform: 0 });
   }
-  if (n < 1) {
-    index = frames.length;
+);
+
+let itemTransform = function(direction) {
+  if(direction === 'right') {
+    /*if ((itemPosition + wrapperWidth/itemWidth - 1) >= position.getMax) {
+      return; 
+    } */
+    itemPosition++;
+    wrapperTransform -= step;  
   }
-  
-  let i;
-  for(i=0; i<frames.length; i++) {
-    frames[i].style.display = "none";
+  if(direction === 'left') {
+    itemPosition--;
+    wrapperTransform += step;
   }
-  frames[index-1].style.display = "block";
-  
-  for(i=0; i<marks.length; i++) {
-    marks[i].className = marks[i].className.replace("mark_NotCurrentFrame");
-  }
-  marks[index-1].className+="mark_CurrentFrame";
-}
+  wrapper.style.fontsize = '26px';
+};
 
-function prevFrame() {
-  showFrame(index-=1);
-}
+let handleArrowClick = function(e) {
+  e.preventDefault();
+  let direction = e.target.classList.contains('.slide_leftArrow') ? 'left' : 'right';
+  itemTransform(direction);
+};
 
-function nextFrame() {
-  showFrame(index+=1);
-}
+let setUpListenerLeftArrow = function() {
+  leftArrow.addEventListener('click', handleArrowClick());
+};
 
-function currentFrame(n) {
-  showFrame(index = n);
-}
+let setUpListenerRighttArrow = function() {
+  rightArrow.addEventListener('click', handleArrowClick());
+};
 
-showFrame(index);
+setUpListenerLeftArrow();
+setUpListenerRighttArrow();
+
