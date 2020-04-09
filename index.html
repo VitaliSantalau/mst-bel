@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <script src="sctipts/slayder.js"></script>
+    <script src="sctipts/slayder.js" defer></script>
   </head>
   <body>
     <header>
@@ -49,8 +49,8 @@
             SLIDE 4
           </div>
         </div>
-        <a class="slide_leftArrow" href='#' role="button">< left</a>
-        <a class="slide_rightArrow" href='#' role="button">right ></a>
+        <div class="slide_leftArrow" onclick="changeSlide()"><</div>
+        <div class="slide_rightArrow" onclick="changeSlide()">></div>
       </section>
 
 
