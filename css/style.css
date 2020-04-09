@@ -101,17 +101,22 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
-  transition: transform 1s ease;    
+  transition: transform 2s ease;    
 }
 
 .slide_item {
+  position: relative;
   flex: 0 0 100%; /* quantity current slides 1 (if 50% will be 2) */
   max-width: 100%; /* quantity current slides 1 (if 50% will be 2) */
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 2s ease 2s;
+  
+  
  
   background-color: rgb(193, 226, 144);
+  border: 1px solid red;
 }
 
 .slide_leftArrow {

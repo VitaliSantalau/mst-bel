@@ -6,30 +6,32 @@ let rightArrow = document.querySelector('.slide_rightArrow');
 let items = [];
 
 let slideIndex = 0;
-//let slideItemPosition = 0;
-//let step = 100;
-//let wrapperWidth = parseFloat(getComputedStyle(wrapper).width); // width .slide_wrapper
-//let itemWidth = parseFloat(getComputedStyle(items[0]).width); // width .slide_item
-// value for transform .slide_wrapper
-//let step = itemWidth / wrapperWidth * 100; // step for transform
+let currentIndexTransform = 1;
+let step = 100;
 
-// let position = {
-//  getMin: 0,
-//  getMax: items.length - 1
-//};
 
-slideItems.forEach(
-  function(item, index) {
-    items.push({ item: item, position: index, transform: -100*(index+1)});
-  }
-);
+//slideItems.forEach(
+//  function(item, index) {
+//    items.push({ item: item, position: index, transform: 0});
+//  }
+//);
 
 function changeSlide() {
-  console.log(items);
-  wrapper.style.transform = `translateX(${items[slideIndex].transform}%)`;
-  items[4] = items[0];
-  console.log(items);
-  slideIndex++;
-
+ 
+  if(slideIndex<slideItems.length) {
+    let transform = -currentIndexTransform*step;
+    wrapper.style.transform = `translateX(${transform}%)`;
+    currentIndexTransform++;
+    slideItems[slideIndex].style.transform = "translateX(400%)";
+    slideIndex++;
+  } else {
+    slideIndex = 0;
+    currentIndexTransform = 1;
+    let transform = -currentIndexTransform*step;
+    wrapper.style.transform = `translateX(${transform}%)`;
+    currentIndexTransform++;
+    slideItems[slideIndex].style.transform = "translateX(400%)";
+    slideIndex++;
+  }
+  
 }
-
