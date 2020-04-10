@@ -26,11 +26,10 @@ function changeSlide() {
     slideIndex++;
   } else {
     slideIndex = 0;
-    currentIndexTransform = 1;
     let transform = -currentIndexTransform*step;
     wrapper.style.transform = `translateX(${transform}%)`;
     currentIndexTransform++;
-    slideItems[slideIndex].style.transform = "translateX(400%)";
+    slideItems[slideIndex].style.transform = "translateX(8500%)";
     slideIndex++;
   }
   
