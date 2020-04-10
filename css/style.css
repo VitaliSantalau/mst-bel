@@ -111,26 +111,26 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
   transition: transform 2s ease 2s;
-  
-  
- 
+   
   background-color: rgb(193, 226, 144);
   border: 1px solid red;
 }
 
-.slide_leftArrow {
+.slide_control {
   cursor: pointer;
   position: absolute;
-  left: 0;
   top: 50%;
+  z-index: 3;
 }
 
-.slide_rightArrow {
-  cursor: pointer;
-  position: absolute;
+.leftArrow {
+  left: 0;
+}
+
+.rightArrow {
   right: 0;
-  top: 50%;
 }
 
 

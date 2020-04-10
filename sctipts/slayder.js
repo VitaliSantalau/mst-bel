@@ -3,35 +3,49 @@ let wrapper = document.querySelector(".slide_wrapper");
 let slideItems = document.querySelectorAll('.slide_item');
 let leftArrow = document.querySelector('.slide_leftArrow');
 let rightArrow = document.querySelector('.slide_rightArrow');
-let items = [];
 
-let slideIndex = 0;
-let currentIndexTransform = 1;
-let step = 100;
+let step = 100; // one slide visible
 
+// variable for moving slide 
+let slideIndex = Math.round(slideItems.length/2); // set middle of slides quantity
+let slideMovingCycle = 1;
+let slideMoving = slideItems.length * step;
+let slideMovingLenghtWay;
 
-//slideItems.forEach(
-//  function(item, index) {
-//    items.push({ item: item, position: index, transform: 0});
-//  }
-//);
+// variable for moving all slides together
+let wrapperMovingIndex = 1;
+let wrapperMoving;
 
 function changeSlide() {
- 
-  if(slideIndex<slideItems.length) {
-    let transform = -currentIndexTransform*step;
-    wrapper.style.transform = `translateX(${transform}%)`;
-    currentIndexTransform++;
-    slideItems[slideIndex].style.transform = "translateX(400%)";
-    slideIndex++;
-  } else {
-    slideIndex = 0;
-    currentIndexTransform = 1;
-    let transform = -currentIndexTransform*step;
-    wrapper.style.transform = `translateX(${transform}%)`;
-    currentIndexTransform++;
-    slideItems[slideIndex].style.transform = "translateX(400%)";
-    slideIndex++;
-  }
   
 }
+
+/*
+function changeSlideLeft() {
+  // moving slides together
+  wrapperMoving = wrapperMovingIndex * step;
+  wrapper.style.transform = `translateX(-${wrapperMoving}%)`;
+  wrapperMovingIndex++;
+  if(slideIndex < slideItems.length) {
+    // moving slide alone to the end of chain
+    slideMovingLenghtWay = slideMoving*slideMovingCycle;
+    if(slideIndex == (slideItems.length - 1)) {
+      slideItems[slideIndex].style.zIndex = '1'; // set last slide on second layer
+      slideItems[slideIndex].style.transform = `translateX(${slideMovingLenghtWay}%)`;
+      slideIndex++;
+    } else {
+        slideItems[slideIndex].style.transform = `translateX(${slideMovingLenghtWay}%)`;
+        slideIndex++;
+      }
+  } else {
+    slideItems[slideItems.length - 1].style.zIndex = '2'; // set last slide on first layer 
+    // moving slide alone to the end of chain
+    slideIndex = 0;
+    slideMovingCycle++;
+    slideMovingLenghtWay = slideMoving*slideMovingCycle;
+    slideItems[slideIndex].style.transform = `translateX(${slideMovingLenghtWay}%)`;
+    slideIndex++;
+  }
+}
+*/
+
