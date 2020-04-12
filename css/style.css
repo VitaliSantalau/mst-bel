@@ -103,7 +103,6 @@ main {
   display: flex;
   transition: transform 2s ease;    
 }
-
 .slide_item {
   position: relative;
   flex: 0 0 100%; /* quantity current slides 1 (if 50% will be 2) */
@@ -112,7 +111,7 @@ main {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  transition: transform 2s ease 2s;
+  transition: transform 0.1s ease;
    
   background-color: rgb(193, 226, 144);
   border: 1px solid red;

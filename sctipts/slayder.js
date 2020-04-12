@@ -1,45 +1,71 @@
-let slide = document.querySelector('.main_slide');
 let wrapper = document.querySelector(".slide_wrapper");
 let slideItems = document.querySelectorAll('.slide_item');
-let leftArrow = document.querySelector('.slide_leftArrow');
-let rightArrow = document.querySelector('.slide_rightArrow');
+let slideControl = document.querySelectorAll('.slide_control');
+let leftArrow = document.querySelector('.leftArrow');
+let rightArrow = document.querySelector('.rightArrow');
 
 let step = 100; // one slide visible
-
-// variable for moving slide 
-let slideIndex = Math.round(slideItems.length/2); // set middle of slides quantity
-let slideMovingCycle = 1;
-let slideMoving = slideItems.length * step;
-let slideMovingLenghtWay;
-
 // variable for moving all slides together
-let wrapperMovingIndex = 1;
-let wrapperMoving;
+let wrapperMovingIndex = 0;
+let wrapperMoving = wrapperMovingIndex * step;
+// variable for moving slide 
+const minSlideIndex = 0;
+const maxSlideIndex = slideItems.length - 1;
+let slideIndex = 0;
+let slideMoving = slideItems.length * step;
+let slideMovingCycle = 0;
+let slideMovingLenghtWay; 
+// array of slides
+let slides = [];
+slideItems.forEach(function(slide, index) {
+  slides.push({
+    slide: slide,
+    position: index,
+    transform: 0 
+  })
+});
 
-function changeSlide() {
+function slidesToLeft() {
+  slideIndex++;
+  if(slideIndex > maxSlideIndex) {
+    slideIndex = minSlideIndex;
+  }
+  console.log(slideIndex);
+  /////////////
+  wrapperMovingIndex--;
+  wrapperMoving = wrapperMovingIndex*step;
+  wrapper.style.transform = `translateX(${wrapperMoving}%)`;
+}
+
+function slideToEnd() {
+    
+}
+
+function slideToStart() {
   
 }
 
-/*
-function changeSlideLeft() {
-  // moving slides together
-  wrapperMoving = wrapperMovingIndex * step;
-  wrapper.style.transform = `translateX(-${wrapperMoving}%)`;
+function slidesToRight() {
+  slideIndex--;
+  if(slideIndex<minSlideIndex) {
+    slideIndex = maxSlideIndex;
+  }
+  console.log(slideIndex);
+  ////////////////
   wrapperMovingIndex++;
-  if(slideIndex < slideItems.length) {
-    // moving slide alone to the end of chain
-    slideMovingLenghtWay = slideMoving*slideMovingCycle;
-    if(slideIndex == (slideItems.length - 1)) {
-      slideItems[slideIndex].style.zIndex = '1'; // set last slide on second layer
-      slideItems[slideIndex].style.transform = `translateX(${slideMovingLenghtWay}%)`;
-      slideIndex++;
+  wrapperMoving = wrapperMovingIndex*step;
+  wrapper.style.transform = `translateX(${wrapperMoving}%)`;
+}
+
+slideControl.forEach(arrow => {
+  arrow.onclick = function(e) {
+    if(e.target.classList.contains('leftArrow')) {
+      slidesToLeft();
+      slideToEnd();
     } else {
-        slideItems[slideIndex].style.transform = `translateX(${slideMovingLenghtWay}%)`;
-        slideIndex++;
+        slidesToRight();
       }
-  } else {
-    slideItems[slideItems.length - 1].style.zIndex = '2'; // set last slide on first layer 
-    // moving slide alone to the end of chain
-    slideIndex = 0;
-*/
+  }
+});
+
 
