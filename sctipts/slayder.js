@@ -41,7 +41,7 @@ function slideToEnd() {
   } else {
     slides[maxSlideIndex].slide.style.zIndex = '1';
     };
-  slides[slideIndex].slide.style.cssText = "transition: transform 0.1s ease 2s";
+  slides[slideIndex].slide.style.cssText = "transition: transform 0.1s ease 1s";
   slides[slideIndex].transform = slides[slideIndex].transform + slideMoving;
   slides[slideIndex].slide.style.transform = `translateX(${slides[slideIndex].transform}%)`;
   slideIndex++;
@@ -76,3 +76,24 @@ slideControl.forEach(arrow => {
       };
   }
 });
+let interval;
+const cycle = () => {
+  interval = setInterval(function() {
+    slidesToLeft();
+    slideToEnd();
+  }, 5000);
+};
+cycle();
+
+slideControl.forEach(arrow => {
+  arrow.addEventListener('mouseenter', function() {
+    clearInterval(interval);
+  });
+  arrow.addEventListener('mouseleave', function() {
+    clearInterval(interval);
+    cycle();
+  });
+
+});
+
+

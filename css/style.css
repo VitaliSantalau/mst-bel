@@ -101,7 +101,7 @@ main {
   height: 100%;
   width: 100%;
   display: flex;
-  transition: transform 2s ease;    
+  transition: transform 1s ease;    
 }
 .slide_item {
   position: relative;
@@ -111,17 +111,25 @@ main {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  transition: transform 0.1s ease 2s;
+  transition: transform 0.1s ease 1s;
    
   background-color: rgb(193, 226, 144);
-  border: 1px solid red;
 }
 
 .slide_control {
+  font-size: 2.2em;
+  font-weight: 900;
+  color: antiquewhite;
+  background-color: rgba(107, 28, 28, .2);
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 45%;
   z-index: 3;
+}
+
+.slide_control:hover {
+  color: aliceblue;
+  background-color: rgba(107, 28, 28, .4);
 }
 
 .leftArrow {
