@@ -111,7 +111,7 @@ main {
   justify-content: center;
   align-items: center;
   z-index: 2;
-  transition: transform 0.1s ease;
+  transition: transform 0.1s ease 2s;
    
   background-color: rgb(193, 226, 144);
   border: 1px solid red;
