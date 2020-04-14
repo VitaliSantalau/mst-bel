@@ -87,7 +87,6 @@ main {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  
 }
 
 .wrappeMainSlide_MainItems {
@@ -96,11 +95,9 @@ main {
   height: 70%;
 }
 
-
 .main_slide {
   width: 60%;
   height: 100%;
-  padding-bottom: 2em;
   position: relative;
   overflow: hidden;
 }
@@ -141,11 +138,11 @@ main {
 }
 
 .main_leftArrow {
-  left: 0;
+  left: .1em;
 }
 
 .main_rightArrow {
-  right: 0;
+  right: .1em;
 }
 
 .main_items {
@@ -153,13 +150,12 @@ main {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-content: stretch;
 }
 
 .main_items .item {
-  width: 60%;
-  margin-bottom: 2em;
+  width: 50%;
   border: 1px solid rgb(211, 204, 204);
 }
 
