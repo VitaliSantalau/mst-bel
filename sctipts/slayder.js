@@ -1,6 +1,6 @@
-let wrapper = document.querySelector(".slide_wrapper");
-let slideItems = document.querySelectorAll('.slide_item');
-let slideControl = document.querySelectorAll('.slide_control');
+let wrapper = document.querySelector(".main_slide_wrapper");
+let slideItems = document.querySelectorAll('.main_slide_item');
+let slideControl = document.querySelectorAll('.main_slide_control');
 
 let step = 100; // one slide visible
 
@@ -67,7 +67,7 @@ function slideToStart() {
 
 slideControl.forEach(arrow => {
   arrow.onclick = function(e) {
-    if(e.target.classList.contains('leftArrow')) {
+    if(e.target.classList.contains('main_leftArrow')) {
       slidesToLeft();
       slideToEnd();
     } else {
@@ -93,7 +93,24 @@ slideControl.forEach(arrow => {
     clearInterval(interval);
     cycle();
   });
-
 });
 
+slideItems.forEach(item => {
+  item.addEventListener('mouseenter', function() {
+    clearInterval(interval);
+  });
+  item.addEventListener('mouseleave', function() {
+    clearInterval(interval);
+    cycle();
+  });
+})
 
+let handleVisibilityChange = () => {
+  if (document.visibilityState === "hidden") {
+    clearInterval(interval);
+  } else {
+    clearInterval(interval);
+    cycle();
+  }
+}
+document.addEventListener('visibilitychange', handleVisibilityChange, false);
