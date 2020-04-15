@@ -92,13 +92,14 @@ main {
 }
 
 .wrappeMainSlide_MainItems {
-  display: flex;
   width: 85%;
   height: 70%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main_slide {
-  width: 60%;
+  width: 55%;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -184,12 +185,20 @@ main {
 .category_slide_item {
   flex: 0 0 20%; /* quantity current slides 1 (if 50% will be 2) */
   max-width: 20%; /* quantity current slides 1 (if 50% will be 2) */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-    
-  background-color: rgb(156, 144, 226);
+  
+  overflow: hidden;
 }
+
+.category_slide_item img {
+  width: 50%;
+  height: 70%;
+    
+}
+
 
 .category_slide_control {
   font-size: 2.2em;
