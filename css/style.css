@@ -82,16 +82,18 @@ header {
 
 
 main {
-  width: 80%;
+  width: 90%;
   margin-top: 2em;
+  margin-bottom: 1em;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .wrappeMainSlide_MainItems {
   display: flex;
-  width: 100%;
+  width: 85%;
   height: 70%;
 }
 
@@ -109,7 +111,6 @@ main {
   transition: transform 1s ease;    
 }
 .main_slide_item {
-  position: relative;
   flex: 0 0 100%; /* quantity current slides 1 (if 50% will be 2) */
   max-width: 100%; /* quantity current slides 1 (if 50% will be 2) */
   display: flex;
@@ -159,24 +160,61 @@ main {
   border: 1px solid rgb(211, 204, 204);
 }
 
-.category_slide {
-  width: 100%;
+.category {
+  width: 90%;
   height: 30%;
+  margin-top: .5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category_slide {
+  height: 100%;
+  overflow: hidden;
 }
 
 .category_slide_wrapper {
   height: 100%;
   width: 100%;
   display: flex;
+  transition: transform 1.8s ease;
+}
+
+.category_slide_item {
+  flex: 0 0 20%; /* quantity current slides 1 (if 50% will be 2) */
+  max-width: 20%; /* quantity current slides 1 (if 50% will be 2) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
+  background-color: rgb(156, 144, 226);
+}
+
+.category_slide_control {
+  font-size: 2.2em;
+  font-weight: 900;
+  color:rgba(107, 28, 28, .7);
+  cursor: pointer;
+}
+
+.category_slide_control:hover {
+  color:rgb(107, 28, 28);
+}
+
+.category_leftArrow {
+  margin-right: .3em;
+}
+
+.category_rightArrow {
+  margin-left: .3em;
 }
 
 footer {
   height: 10%;
   width: 100%;
-
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-
   border-top: 3px solid rgb(211, 204, 204);
 }
