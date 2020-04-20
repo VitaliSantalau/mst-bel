@@ -216,12 +216,13 @@ main {
 
 .itemDiscription {
   font-size: 1.2em;
-  color: brown;
+  color: rgb(61, 59, 59);;
   font-weight: 900;
 }
 
 .itemAct {
-  color: brown;
+  margin-left: 1em;
+  color: rgb(61, 59, 59);;
 }
 
 .category {
@@ -321,9 +322,9 @@ main {
 
 .discription {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 900;
-  color: brown;
+  color: rgb(61, 59, 59);
   visibility: hidden;
 }
 
