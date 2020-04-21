@@ -79,11 +79,10 @@ header {
 }
 
 main {
-  position: relative;
+  flex-grow: 1;
   width: 90%;
   margin-top: 2em;
   margin-bottom: 1em;
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
@@ -95,26 +94,28 @@ main {
 }
 
 .introduction {
-  flex-grow: 1;
   display: flex;
   justify-content: space-around;
-  align-items: flex-start;
 }
 
 .requisite {
-  font-size: 1.27em;
+  font-size: 1.1em;
   display: flex;
   flex-direction: column;  
 }
 
 .requisite>p {
-  margin: .7em;
+  margin: .6em;
 }
-
 
 .map {
   width: 50%;
-  height: 80%;
+  height: 100%;
+}
+
+iframe {
+  height: 100%;
+  width: 100%;
 }
 
 footer {

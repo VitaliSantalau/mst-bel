@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  width: auto;
 }
 
 body {
@@ -14,7 +13,7 @@ body {
 }
 
 header {
-  height: 10%;
+  /*height: 10%;*/
   width: 100%;
   padding-bottom: 0.5%;
   display: flex;
@@ -79,10 +78,11 @@ header {
 }
 
 main {
+  flex-grow: 1;
   width: 90%;
+  height: 100%;
   margin-top: 2em;
   margin-bottom: 1em;
-  flex-grow: 1;
   display: flex;
   justify-content: space-between;
 }
@@ -137,7 +137,7 @@ main {
 
 .category_link {
   width: 22%;
-  height: 40%;
+  /*height: 40%;*/
   margin: .5em;
   border: 1.5px solid rgb(211, 204, 204);
   border-radius: 4%;
@@ -160,34 +160,6 @@ main {
   background-image: url(../pictures/clothes.png);
 }
 
-.boots {
-  background-image: url(../pictures/boots.png);
-}
-
-.glasses {
-  background-image: url(../pictures/glasses.png);
-}
-
-.helmet {
-  background-image: url(../pictures/helmet.png);
-}
-
-.respirator {
-  background-image: url(../pictures/respirator.png);
-}
-
-.gloves {
-  background-image: url(../pictures/gloves.png);
-}
-
-.headphone {
-  background-image: url(../pictures/headphone.png);
-}
-
-.slings {
-  background-image: url(../pictures/slings.png);
-}
-
 .discription {
   height: 20%;
   font-size: .8em;
@@ -204,7 +176,7 @@ main {
 }
 
 footer {
-  height: 10%;
+  /*height: 10%;*/
   width: 100%;
   padding: .5em;
   border-top: 3px solid rgb(211, 204, 204);
