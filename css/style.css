@@ -181,8 +181,8 @@ main {
 }
 
 .item_link:hover {
-  transform: scale(1.05);
-  transition: .2s transform;
+  /*transform: scale(1.05);
+  transition: .2s transform;*/
 }
 
 .catalog {
