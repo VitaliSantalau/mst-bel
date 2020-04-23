@@ -1,6 +1,5 @@
 html, body {
   height: 100%;
-  width: auto;
 }
 
 body {
@@ -9,75 +8,7 @@ body {
   align-items: center;
   padding: 1%;
   background-color:rgb(238, 234, 234);
-  /*background-color: rgb(184, 181, 181);*/
-  /*background-color: gray;*/
 }
-
-header {
-  height: 10%;
-  width: 100%;
-  padding-bottom: 0.5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 3px solid rgb(211, 204, 204);
-}
-
-.header_logo p {
-  font-size: 2.16em;
-  font-weight: 900;
-  margin: 5px;
-  color: brown;
-}
-
-.header_contact {
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.header_contact .telephone {
-  font-weight: 900;
-  color: rgb(61, 59, 59);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.A1 {
-  margin: 5px;
-  font-weight: 900;
-  color: yellow;
-  text-shadow: black 1px 1px 1px;
-}
-
-.MTC {
-  margin: 5px;
-  color: red;
-  text-shadow: black 0.5px 0.5px 1px;
-}
-
-.header_nav {
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: stretch;
-}
-
-.header_nav a {
-  color: rgb(61, 59, 59);
-  margin-left: 15px;
-  padding-top: 5%;
-  padding-left: 5px;
-  border-left: 3px solid rgb(211, 204, 204);
-}
-
-.header_nav a:hover {
-  color: rgb(192, 36, 36);
-  border-left: 3px solid rgb(192, 36, 36);
-}
-
 
 main {
   width: 90%;

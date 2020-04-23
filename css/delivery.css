@@ -9,7 +9,7 @@ body {
   padding: 1%;
   background-color:rgb(238, 234, 234);
 }
-
+  
 main {
   flex-grow: 1;
   width: 90%;
@@ -18,38 +18,18 @@ main {
   display: flex;
   flex-direction: column;
 }
-
-.introduction_name {
+  
+.name {
   font-size: 2em;
   margin-bottom: 1em;
   border-bottom: 3px solid rgb(211, 204, 204);
 }
-
-.introduction {
+  
+.sales {
   display: flex;
   justify-content: space-around;
 }
-
-.requisite {
-  font-size: 1.1em;
-  display: flex;
-  flex-direction: column;  
-}
-
-.requisite>p {
-  margin: .6em;
-}
-
-.map {
-  width: 50%;
-  height: 100%;
-}
-
-iframe {
-  height: 100%;
-  width: 100%;
-}
-
+    
 footer {
   height: 5%;
   width: 100%;

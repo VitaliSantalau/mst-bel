@@ -1,0 +1,65 @@
+header {
+    width: 100%;
+    padding-bottom: .3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 3px solid rgb(211, 204, 204);
+  }
+  
+  .header_logo p {
+    font-size: 2.16em;
+    font-weight: 900;
+    color: brown;
+  }
+  
+  .header_contact {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .header_contact .telephone {
+    font-weight: 900;
+    color: rgb(61, 59, 59);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .A1 {
+    margin: .3em;
+    font-weight: 900;
+    color: yellow;
+    text-shadow: black 1px 1px 1px;
+  }
+  
+  .MTC {
+    margin: .3em;
+    color: red;
+    text-shadow: black 0.5px 0.5px 1px;
+  }
+  
+  .header_nav {
+    height: 2.16em;
+    margin-right: .3em;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .header_nav_link {
+    color: rgb(61, 59, 59);
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    border-left: 3px solid rgb(211, 204, 204);
+  }
+  
+  .header_nav_link:hover {
+    color: brown;
+    border-left: 3px solid brown;
+  }
