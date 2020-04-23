@@ -1,15 +1,3 @@
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1%;
-  background-color:rgb(238, 234, 234);
-}
-
 main {
   width: 90%;
   margin-top: 2em;
@@ -133,11 +121,4 @@ main {
 .category_link:hover .discription {
   border-top: 1.5px solid rgb(156, 153, 153);
   color: brown;
-}
-
-footer {
-  height: 10%;
-  width: 100%;
-  padding: .5em;
-  border-top: 3px solid rgb(211, 204, 204);
 }
