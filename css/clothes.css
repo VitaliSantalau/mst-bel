@@ -1,21 +1,20 @@
 main {
-  flex-grow: 1;
   width: 90%;
-  height: 100%;
   margin-top: 2em;
   margin-bottom: 1em;
+  flex-grow: 1;
   display: flex;
   justify-content: space-between;
 }
 
 .navCategory {
-  width: 20%;
+  min-width: 20em;
   display: flex;
   flex-direction: column;
 }
 
 .navCategory a:first-of-type {
-  border: 2px solid rgb(211, 204, 204);
+  border-top: 2px solid rgb(211, 204, 204);
 }
 
 .category_nav_link {
@@ -26,10 +25,6 @@ main {
   border-left: 2px solid rgb(211, 204, 204);
   border-bottom: 2px solid rgb(211, 204, 204);
   border-right: 2px solid rgb(211, 204, 204);
-}
-
-.category_nav_link:hover .category_nav_discription {
-  color: brown;
 }
 
 .category_nav_link:hover .category_nav_arrow {
@@ -49,17 +44,34 @@ main {
   color: brown;
 }
 
+.mark {
+  background-color: brown;
+}
+
+.mark>.category_nav_discription {
+  color: white;
+}
+
+.mark>.category_nav_arrow {
+  visibility: visible;
+  color: white;
+}
+
 .category {
-  width: 75%;
+  flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-content: flex-start;
 }
 
 .category_link {
-  width: 22%;
-  /*height: 40%;*/
+  width: 12em;
+  height: 16em;
   margin: .5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   border: 1.5px solid rgb(211, 204, 204);
   border-radius: 4%;
 }
@@ -77,17 +89,36 @@ main {
   background-repeat: no-repeat;
 }
 
-.clothes {
-  background-image: url(../pictures/clothes.png);
+.signal_vest_3 {
+  background-image: url(../pictures/clothes/signal_vest_3.png);
 }
 
-.discription {
-  height: 20%;
-  font-size: .8em;
+.signal_vest_button {
+  background-image: url(../pictures/clothes/signal_vest_button.png);
+}
+
+.signal_vest_button_2 {
+  background-image: url(../pictures/clothes/signal_vest_button_2.png);
+}
+
+.cape_nylon {
+  background-image: url(../pictures/clothes/cape_nylon.png);
+}
+
+.cape_nylon_2 {
+  background-image: url(../pictures/clothes/cape_nylon_2.png);
+}
+
+.cape_PoseidonWPL {
+  background-image: url(../pictures/clothes/cape_PoseidonWPL.png);
+}
+
+.discription {  
+  color: rgb(61, 59, 59);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(61, 59, 59);
+  text-align: center;
   border-top: 1.5px solid rgb(211, 204, 204);
 }
 
@@ -95,3 +126,10 @@ main {
   border-top: 1.5px solid rgb(156, 153, 153);
   color: brown;
 }
+
+.price {
+  font-size: 1.2em;
+  color: rgb(61, 59, 59);
+  padding-left: .5em;
+}
+
